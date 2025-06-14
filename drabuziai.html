@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Family Shop</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <script src="script/script.js" defer></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="images/logo.jpg" width="100px" />
+                    </div>
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="index.html">Pradžia</a></li>
+                            <li><a href="drabuziai.html">Drabužiai</a></li>
+                            <li><a href="apie-mus.html">Apie mus</a></li>
+                            <li><a href="kontaktai.html">Kontaktai</a></li>
+                            <li><a href="">Mano paskyra</a></li>
+                        </ul>
+                    </nav>
+                    <img src="images/cart.png" width="30px" height="30px" />
+                    <img src="images/menu.png" class="menu-icon"  onclick="menutoggle()"/>
+                </div>
+            </div>
+        </div>
+
+       <div class="small-container">
+            <div class="row row-2">
+                <h2>Visi drabužiai</h2>
+                <select id="sortBy">
+                    <option value="">Numatytoji rūšiuotė</option>
+                    <option value="price">Rūšiuoti pagal kainą</option>
+                    <option value="popularity">Rūšiuoti pagal populiarumą</option>
+                    <option value="rating">Rūšiuoti pagal įvertinimą</option>
+                    <option value="sale">Rūšiuoti pagal akciją</option>
+                </select>
+
+            </div>
+        </div>
+
+        <div class="small-container">
+            <div class="row">
+                <div class="col-4 clothes-item" data-price="50" data-popularity="80" data-rating="4" data-sale="true">
+                    <img src="images/sari.jpg" />
+                    <h4>Sari</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>50.00</p>
+                </div>
+                <div class="col-4 clothes-item" data-price="20" data-popularity="100" data-rating="4.5" data-sale="true">
+                    <img src="images/dresses.jpg"/>
+                    <h4>Suknelė</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>€20.00</p>
+                </div>
+                <div class="col-4 clothes-item" data-price="30" data-popularity="70" data-rating="3.5" data-sale="true">
+                    <img src="images/indian.jpg" />
+                    <h4>Indian</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>€30.00</p>
+                </div>
+                <div class="col-4 clothes-item" data-price="35" data-popularity="90" data-rating="5" data-sale="true">
+                    <img src="images/dress-grandmother.jpg" />
+                    <h4>Suknelė</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>€35.00</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 clothes-item" data-price="45" data-popularity="90" data-rating="4.5" data-sale="true">
+                    <img src="images/pants-grandfather.jpg" />
+                    <h4>Kelnės</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>€45.00</p>
+                </div>
+                <div class="col-4 clothes-item" data-price="90" data-popularity="85" data-rating="4.5" data-sale="true">
+                    <img src="images/jacket.jpg" />
+                    <h4>Švarkas</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>€90.00</p>
+                </div>
+                <div class="col-4 clothes-item" data-price="20" data-popularity="60" data-rating="3.5" data-sale="true">
+                    <img src="images/dresses-baby.jpg" />
+                    <h4>Vaikiška suknelė</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>€20.00</p>
+                </div>
+                <div class="col-4 clothes-item" data-price="20" data-popularity="90" data-rating="5" data-sale="true">
+                    <img src="images/tops.jpg" />
+                    <h4>Palaidinė</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>€20.00</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 clothes-item" data-price="22" data-popularity="90" data-rating="3.5" data-sale="true">
+                    <img src="images/sweater-boy.jpg" />
+                    <h4>Megztinis</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>€22.00</p>
+                </div>
+                <div class="col-4 clothes-item" data-price="30" data-popularity="87" data-rating="5" data-sale="true">
+                    <img src="images/suknele.jpg" />
+                    <h4>Suknelė</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>€30.00</p>
+                </div>
+                <div class="col-4 clothes-item" data-price="60" data-popularity="96" data-rating="3.5" data-sale="true">
+                    <img src="images/shoes-men.jpg" />
+                    <h4>Batai</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>€60.00</p>
+                </div>
+                <div class="col-4 clothes-item" data-price="40" data-popularity="99" data-rating="5" data-sale="true">
+                    <img src="images/shoes2-women.jpg" />
+                    <h4>Batai</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>€40.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-btn">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>&#8594</span>
+        </div>
+
+        <!---footer-->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Atsisiųskite mūsų programėlę</h3>
+                        <p>
+                            Atsisiųskite mūsų programėlę „Play“ arba „iOS“ ir patirkite dar patogesnį apsipirkimą!
+                        </p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png" />
+                            <img src="images/app-store.png" />
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/logo.jpg" />
+                        <p>
+                            Šeimos Drabužių Parduotuvė“ - stilingi ir patogūs drabužiai visai šeimai, modernūs dizainai ir aukšta kokybė!
+                        </p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Naudingos nuorodos</h3>
+                        <ul>
+                            <li>Kuponai</li>
+                            <li>Blogo įrašai</li>
+                            <li>Prekių grąžinimo politika</li>
+                            <li>Prisijunkite prie partnerių programos</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Sekite mus</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>YouTube</li>
+                            <li>Twiterr</li>
+                            <li>Instagram</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr />
+                <p class="copyright">
+                    Ši svetainė yra saugoma. Visos teisės saugomos. 2025
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
